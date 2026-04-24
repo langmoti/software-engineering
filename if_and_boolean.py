@@ -11,7 +11,7 @@
 # else -> Wenn kein if oder elif in der Kette wahr war, wird das ausgefuehrt.
 
 # Hinweise: 
-# 1. Das erste If/elif wird ausgefuehrt und die anderen dann uebersprungen. 
+# 1. Das erste wahre If/elif wird ausgefuehrt und die anderen dann uebersprungen. 
 #    Hat man if ...: und elif ....: und if ....: ist korrekt, wird elif gar nicht erst angeschaut.
 # 2. Es koennen beliebig viele elif's nach dem ersten If noch kommen. 
 # 3. Am Ende kommt maximal ein else, welches immer ausgefuehrt wird, wenn alle if/elif falsch waren. Ein Default sozusagen.
