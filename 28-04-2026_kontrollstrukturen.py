@@ -4,7 +4,7 @@
 #
 # 2. Der Spieler gibt eine Zahl zwischen 1 und 10 ein
 #
-# 3. Stimmt eingegebene mit generierter Zahl überein: gebe "Horaaaa! Deine Zahl {eingabe} ist richtig." aus
+# 3. Stimmt eingegebene mit generierter Zahl ueberein: gebe "Horaaaa! Deine Zahl {eingabe} ist richtig." aus
 #
 # 4. Stimmt eingegebene mit generierter Zahl nicht überein: gebe "Oh je! Leider ist deine eingegebene Zahl {eingabe} nicht korrekt. Die richtige Zahl waere {generated} gewesen." aus
 
@@ -16,7 +16,6 @@ def generate_number(bottom, top):
   """
   import random
   return random.randint(bottom, top)
-
 
 # 2. Der Spieler gibt eine Zahl zwischen 1 und 10 ein
 def read_number(bottom, top):
@@ -129,3 +128,16 @@ if __name__ == '__main__':
 
   # Ruft zweiten Teil von 04 Kontrollstrukturen (if) auf
   #print_line('Hallo', 5)
+
+# Das angesprochene Beispiel wie man eine zufaellig langen String erhaelt:
+#import random
+#import string
+#
+# Define the pool of characters (letters and digits)
+#characters = string.ascii_letters + string.digits
+#
+# Generate a random string of length 10
+# random.choices returns a list, so we "".join() it
+#random_string = ''.join(random.choices(characters, k=10))
+#
+#print(random_string)
