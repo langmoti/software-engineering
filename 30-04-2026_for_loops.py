@@ -51,3 +51,7 @@ if __name__ == '__main__':
 #  meine_einkaufsliste = kaufe('Brot', meine_einkaufsliste)
 #  drucke_einkaufsliste(meine_einkaufsliste)
 #  drucke_einkaufsliste(eine_andere__einkaufsliste)
+
+# Es gibt auch Steuerungsmoeglichkeiten fuer einen Loop:
+# continue: gehe direkt zum naechsten Element und ueberspringe den restlichen Loop
+# break: beende die Loop Ausfuehrung fuer alle Elemente und mache mit anderem Code weiter
