@@ -14,6 +14,7 @@ def find_element(matrix, element):
       entry_counter += 1
       if entry == element:
         results.append((line_counter, entry_counter))
+        #results.append((line_counter, line.index(entry)))
   return results
 ###############################################################################
 
@@ -25,13 +26,12 @@ def number_list(liste):
   for number, entry in enumerate(liste):
     print(f"{number+1}. {str(entry).capitalize()}")
   return
-
 ###############################################################################
 
 if __name__ == '__main__':
 
 # Beispiel Matrix und gesuchtes Element
-  matrix = [[1,4,3],[1,2,3],[1,2,3]]
+  matrix = [[1,4,3],[1,3,3],[1,2,3]]
   element = 3
 
 # Funktion findet wo Element in Matrix ist
@@ -45,4 +45,4 @@ if __name__ == '__main__':
   teilnehmer = ['Uwe', 'Daniel', 'Noe', 'Matthias']
 
 # Funktion gibt nummerierte Liste aus
-  print(); number_list(teilnehmer); print()
+ # print(); number_list(teilnehmer); print()
