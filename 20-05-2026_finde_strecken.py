@@ -58,9 +58,9 @@ def gesamtpreis(kleidungsstuecke: list[str] | None = None, preise: dict | None =
 
 if __name__ == '__main__':
 
-  # Welche der Aufgaben ausgefuhert werden soll
+  # Welche der Aufgaben ausgefuhert werden soll -> Setze es auf True
   strecken = False
-  dictionaries01 = True
+  dictionaries01 = False
 
   if strecken:
     strecken = [400, 500, 300, 600, 150, 250]
@@ -90,3 +90,13 @@ if __name__ == '__main__':
     print() # Nur fuer Abstand 
     preis = sum(preise.get(kleidungsstueck, 0.0) for kleidungsstueck in kleidungsstuecke)
     print(f"Gesamtpreis der Kleidungsstucke als Einzeiler: {preis}")
+
+# Hinweis:
+# Man kann zwei Dictionaries miteinander vereinen indem man dict1 | dict2 schreibt.
+# Dann ueberschreibt dict2 jene key: values welche auch in ditc1 vorkommen.
+# Also dict1['x'] = 1 und dict2['x'] = 2 wird bei dict3 = dict1 | dict2 zu dict3['x'] = 2
+# Werte, welche nur in einem der beiden Dicts vorkommen bleiben in dict3 erhalten.
+# 
+# Bspw. sinnvoll, wenn man Default Einstellungen hat und diese dann durch eine Konfigurationsdatei vom Nutzer auch setzen lassen will.
+# Jene werte (dict2 dann), welche er gesetzt hat, werden ueberschrieben.
+# Bei jenen, welche er nicht setzte sind weiterhin die Default Einstellungen aus dict1 gueltig/vorhanden. 
