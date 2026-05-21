@@ -60,7 +60,7 @@ if __name__ == '__main__':
 
   # Welche der Aufgaben ausgefuhert werden soll -> Setze es auf True
   strecken = False
-  dictionaries01 = False
+  dictionaries01 = True
 
   if strecken:
     strecken = [400, 500, 300, 600, 150, 250]
