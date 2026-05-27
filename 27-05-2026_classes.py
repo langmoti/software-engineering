@@ -12,6 +12,9 @@
 # Melde bmw auf F-B21 um und pruefe ob bmw2 sich aendert
 
 class KFZ:
+  """
+  Hier als Beispiel ein Docstring in der Klasse KFZ.
+  """
   
   def __init__(self, hersteller, kennzeichen):
     self.hersteller = hersteller
