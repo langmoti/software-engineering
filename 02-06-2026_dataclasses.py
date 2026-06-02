@@ -129,8 +129,6 @@ def dataclass_example():
   example2.append_item(10)
   # Gib die Klasse aus indem man das automatisch generierte __repr__ nutzt:
   print(example2)
-
-
 #############################################################################
 
 #############################################################################
@@ -177,7 +175,7 @@ class ShoppingList:
     """
     Access to element of items using index
     """
-    if len(self.items) >= index:
+    if len(self.items) > index:
       return self.items[index]
     else: return None
 #############################################################################
