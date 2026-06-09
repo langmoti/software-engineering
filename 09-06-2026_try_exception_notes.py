@@ -44,6 +44,26 @@
 # print(error.args) -> will show ('test',) as tuple
 # 
 # Access error name: type(error).__name__
+#
+# One can add notes in newer Python:
+# except Exception as e:
+#   e.add_note('test')
+#   e.add_note('test2')
+# Later:
+#  print(e.__note__())
+#
+# ExceptionGroup allow to handle several exceptions at once
+# except* then picks the first one of that group 
+# Code: raise ExceptionGroup( "multiple failures", [ValueError("bad input"), TypeError("wrong type") ])
+# except ExceptionGroup as eg: or except* ValueError as eg: -> the * picks then the first one, here the ValueError
+# The above example will trigger both excepts:
+#except* ValueError as eg:
+#    print("value handler")
+#except* TypeError as eg:
+#    print("type handler")
+# So for both cases the cleanup code can be executed.
+# The first element, here 'multiple failures' is only a info text. Can be any string.
+# except Exception would catch the entire group and permit working with it.
 #############################################################################
 
 #############################################################################
