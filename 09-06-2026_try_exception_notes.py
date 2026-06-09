@@ -54,12 +54,12 @@
 #
 # ExceptionGroup allow to handle several exceptions at once
 # except* then picks the first one of that group 
-# Code: raise ExceptionGroup( "multiple failures", [ValueError("bad input"), TypeError("wrong type") ])
+# Code: raise ExceptionGroup( "multiple failures", [ValueError("bad input"), TypeError("wrong type")])
 # except ExceptionGroup as eg: or except* ValueError as eg: -> the * picks then the first one, here the ValueError
 # The above example will trigger both excepts:
-#except* ValueError as eg:
+# except* ValueError as eg:
 #    print("value handler")
-#except* TypeError as eg:
+# except* TypeError as eg:
 #    print("type handler")
 # So for both cases the cleanup code can be executed.
 # The first element, here 'multiple failures' is only a info text. Can be any string.
