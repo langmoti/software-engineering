@@ -2,9 +2,38 @@ digraph memory_graph {
 	graph [fontname="Times-Roman" fontsize=14]
 	node [fontname="Times-Roman" fontsize=14 shape=plaintext]
 	edge [fontname="Times-Roman" fontsize=14]
-	node140294285961472 [label=<
-<TABLE BORDER="3" CELLBORDER="1" CELLSPACING="5" CELLPADDING="0" BGCOLOR="seagreen1" PORT="table">
-    <TR><TD BORDER="1" STYLE="ROUNDED"> argument </TD><TD BORDER="1"> 'Hello World' </TD></TR>
+	node871979232 [label=<
+<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0" CELLPADDING="0" BGCOLOR="seagreen3" PORT="table">
+    <TR><TD BORDER="0">  </TD></TR>
+</TABLE>
+> xlabel=type]
+	node140704420442496 [label=<
+<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="5" CELLPADDING="0" BGCOLOR="#60a5ff" PORT="table">
+    <TR><TD BORDER="1" STYLE="ROUNDED"> Testing </TD></TR>
+    <TR><TD BORDER="1" PORT="ref0"> </TD></TR>
+</TABLE>
+> xlabel=dict]
+	node140704420442496:ref0 -> node871979232:table [style=solid]
+	node140704416574032 [label=<
+<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="5" CELLPADDING="0" BGCOLOR="seagreen1" PORT="table">
+    <TR><TD BORDER="1" STYLE="ROUNDED"> argument </TD><TD BORDER="1"> 'Hello' </TD></TR>
 </TABLE>
 > xlabel=Testing]
+	node140704416156416 [label=<
+<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="5" CELLPADDING="0" BGCOLOR="#60a5ff" PORT="table">
+    <TR><TD BORDER="1" STYLE="ROUNDED"> tester </TD></TR>
+    <TR><TD BORDER="1" PORT="ref0"> </TD></TR>
+</TABLE>
+> xlabel=dict]
+	node140704416156416:ref0 -> node140704416574032:table [style=solid]
+	node140704416259424 [label=<
+<TABLE BORDER="3" CELLBORDER="1" CELLSPACING="5" CELLPADDING="0" BGCOLOR="khaki" PORT="table">
+    <TR><TD BORDER="1" STYLE="ROUNDED"> 0: &lt;module&gt; </TD><TD BORDER="1" STYLE="ROUNDED"> 1: main </TD></TR>
+    <TR><TD BORDER="1" PORT="ref0"> </TD><TD BORDER="1" PORT="ref1"> </TD></TR>
+</TABLE>
+> xlabel=call_stack]
+	node140704416259424:ref0 -> node140704420442496:table [style=solid]
+	node140704416259424:ref1 -> node140704416156416:table [style=solid]
+subgraph { rank=same; node140704420442496 -> node140704416156416[weight=10, style=invis]; }
+subgraph { rank=same; node871979232 -> node140704416574032[weight=10, style=invis]; }
 }

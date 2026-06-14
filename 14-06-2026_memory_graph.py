@@ -34,6 +34,7 @@ def main():
   #mg.show(Testing(argument='Hello'))
   #mg.show(Testing(argument='Hello').append_argument(appendix='World'))
   tester = Testing(argument='Hello')
+  mg.show(mg.stack())
   tester.append_argument(appendix='World')
   tester.show_graph()
   return 'Tester ran'
